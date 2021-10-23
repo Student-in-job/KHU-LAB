@@ -38,7 +38,7 @@ class ScaleFragment : Fragment() {
         binding.startButton.setOnClickListener {
             val message = Message()
             var progressInt = progress.toInt()
-            progressInt = (progressInt.plus(99)).div(100) * 100
+            progressInt = ((progressInt.plus(99)).div(100) * 100) + 800
             when (progressInt) {
                 in 9999 downTo 999 -> {
                     message.message = "#1$progressInt"
